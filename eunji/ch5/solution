@@ -1,0 +1,47 @@
+# 1. N보다 커질 때까지 더하기
+def solution(numbers, n):
+    answer = 0
+    for number in numbers:
+        if answer > n:
+            return answer
+        else:
+            answer += number
+    return answer
+
+# 2. 원소들의 곱과 합
+def solution(num_list):
+    mul = 1
+    plus = 0
+
+    for i in num_list:
+        mul *= i
+        plus += i
+        
+    if mul < plus * plus:
+        return 1
+    else:
+        return 0
+
+# 3. N개 간격의 원소들
+def solution(num_list, n):
+    answer = []
+    for i in range(0, len(num_list), n):
+        answer.append(num_list[i])
+    return answer
+
+# 4. 다음 빈칸을 채워주세요
+def join_string(*args):
+    result = ",".join(args)
+    print(result)
+        
+join_string('a','b','c','c')
+
+# 5. 다음 빈칸을 채워주세요
+def sum_nums(*args):
+    result = 0
+    for num in args:
+        result += num
+    print(result)
+        
+sum_nums(10,20,30)
+sum_nums(10,20,30,40)
